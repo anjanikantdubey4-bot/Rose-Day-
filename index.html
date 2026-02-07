@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For SUBHI 🌹</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: url("bg.jpg") center/cover no-repeat;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  background: rgba(0,0,0,0.55);
+  color: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 90%;
+  animation: fade 1s;
+}
+img {
+  max-width: 260px;
+  border-radius: 15px;
+  border: 2px solid #ff4d6d;
+}
+.tap {
+  margin-top: 15px;
+  color: #ffb6c1;
+}
+@keyframes fade {
+  from {opacity:0; transform: scale(0.95);}
+  to {opacity:1; transform: scale(1);}
+}
+</style>
+</head>
+
+<body onclick="nextPage()">
+
+<div class="box" id="content">
+  <h2>🌹 Happy Rose Day 🌹</h2>
+  <p class="tap">Tap anywhere 💕</p>
+</div>
+
+<script>
+let step = 0;
+
+function nextPage() {
+  const c = document.getElementById("content");
+
+  if (step === 0) {
+    c.innerHTML = `
+      <h2>Happy Rose Day cutie 🥰</h2>
+      <p>This is our first…<br>May God grant that we remain this happy for a lifetime 🌹</p>
+      <p class="tap">Tap again 💖</p>`;
+  }
+
+  else if (step === 1) {
+    c.innerHTML = `
+      <h2>For you ❤️</h2>
+      <img src="pink.jpg">
+      <p>Love you so much 💖</p>
+      <p class="tap">Tap again 😘</p>`;
+  }
+
+  else if (step === 2) {
+    c.innerHTML = `
+      <h2>Miss You 💔</h2>
+      <p>
+      Miss you so muchhhhhhhhhhhhhhhhh cutu ❣️🥺<br>
+      ham jaldi milenge baby<br>
+      love you so muchhhhhhhhhhhhhhhhh 💖❤️ miss you
+      </p>`;
+  }
+
+  step++;
+}
+</script>
+
+</body>
+</html>
